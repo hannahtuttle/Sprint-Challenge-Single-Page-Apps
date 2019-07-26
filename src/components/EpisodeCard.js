@@ -6,23 +6,21 @@ const StyledCard = styled.div`
     margin-bottom: 10px;
 `
 
-export default function LocationCard (props) {
-  // image={image}
+
+export default function EpisodeCard (props) {
   return (<StyledCard>
     <Card >
     <Card.Content>
-      <Card.Header>{props.location.name}</Card.Header>
+      <Card.Header>Episode: {props.episode.name}</Card.Header>
       <Card.Meta>
-        <span className='date'>Type: {props.location.type}</span>
+        <span className='date'></span>
       </Card.Meta>
       <Card.Description>
-        <p>Dimensions: {props.location.dimensions}</p>
-        <p>Residents: {props.location.residents.length}</p>
+        <p>Air date: {props.episode['air_date']}</p>
+        <p>Episode number: {props.episode.episode}</p>
       </Card.Description>
     </Card.Content>
     <Card.Content extra>
     </Card.Content>
-  </Card></StyledCard>
-  )
+  </Card></StyledCard>)
 }
-// { name, type, dimension, residents }
