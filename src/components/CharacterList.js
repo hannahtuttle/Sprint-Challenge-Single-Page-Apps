@@ -3,6 +3,11 @@ import axios from 'axios'
 
 
 import CharacterCard from './CharacterCard'
+import styled from 'styled-components'
+
+const StyledCardsContainer = styled.div`
+display: flex;
+`
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
@@ -15,14 +20,14 @@ export default function CharacterList() {
       console.log(response.data.results)
       setCharacter(response.data.results)
     }).catch(error => {
-      console.log('Not getting info from api', error)
+      console.log('Not getting info characters from api', error)
   })
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
   }, [])
 
   return (<section className='character-list grid-view'>
     <div>{character.map(person => {
-        return <CharacterCard key={person.id} people={person}/>
+        return <StyledCardsContainer><CharacterCard key={person.id} people={person}/></StyledCardsContainer>
       })}</div>
       {/* <h2>TODO: `array.map()` over your state here!</h2> */}
     </section>)
