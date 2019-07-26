@@ -1,9 +1,14 @@
 import React from 'react'
 import { Card, Icon, Image } from 'semantic-ui-react'
+import styled from 'styled-components'
+
+const StyledCard = styled.div`
+    margin-bottom: 10px;
+`
 
 
 export default function EpisodeCard (props) {
-  return (<div>
+  return (<StyledCard>
     <Card >
     <Card.Content>
       <Card.Header>Episode: {props.episode.name}</Card.Header>
@@ -17,5 +22,5 @@ export default function EpisodeCard (props) {
     </Card.Content>
     <Card.Content extra>
     </Card.Content>
-  </Card></div>)
+  </Card></StyledCard>)
 }

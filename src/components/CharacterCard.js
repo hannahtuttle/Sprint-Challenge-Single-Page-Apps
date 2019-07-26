@@ -5,7 +5,7 @@ import { Card, Icon, Image } from 'semantic-ui-react'
 export default function CharacterCard (props) {
   return (<div>
     <Card >
-    <Image src={props.people.url} wrapped ui={false} />
+    <Image src={props.people.image} alt= 'character photos' wrapped ui={false} />
     <Card.Content>
       <Card.Header>{props.people.name}</Card.Header>
       <Card.Meta>

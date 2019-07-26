@@ -3,7 +3,14 @@ import axios from 'axios'
 
 import EpisodeCard from './EpisodeCard'
 
+import styled from 'styled-components'
 
+const StyledEpisodeContainer = styled.div`
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+margin: 0 auto;
+`
 
 export default function EpisodesList() {
 
@@ -19,10 +26,8 @@ export default function EpisodesList() {
         })
     },[])
 
-    return (<div>
-        {episode.map(ep => 
+    return (<StyledEpisodeContainer>{episode.map(ep => 
            <EpisodeCard key={ep.id} episode={ep}/>
-        )}
-    </div>)
+        )}</StyledEpisodeContainer>)
 
 }

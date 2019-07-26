@@ -1,9 +1,14 @@
 import React from 'react'
 import { Card, Icon, Image } from 'semantic-ui-react'
+import styled from 'styled-components'
+
+const StyledCard = styled.div`
+    margin-bottom: 10px;
+`
 
 export default function LocationCard (props) {
   // image={image}
-  return (<div>
+  return (<StyledCard>
     <Card >
     <Card.Content>
       <Card.Header>{props.location.name}</Card.Header>
@@ -17,7 +22,7 @@ export default function LocationCard (props) {
     </Card.Content>
     <Card.Content extra>
     </Card.Content>
-  </Card></div>
+  </Card></StyledCard>
   )
 }
 // { name, type, dimension, residents }
