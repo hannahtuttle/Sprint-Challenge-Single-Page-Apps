@@ -7,6 +7,7 @@ import styled from 'styled-components'
 
 const StyledCardsContainer = styled.div`
 display: flex;
+flex-wrap: wrap;
 `
 
 export default function CharacterList() {
@@ -26,9 +27,9 @@ export default function CharacterList() {
   }, [])
 
   return (<section className='character-list grid-view'>
-    <div>{character.map(person => {
-        return <StyledCardsContainer><CharacterCard key={person.id} people={person}/></StyledCardsContainer>
-      })}</div>
+    <StyledCardsContainer>{character.map(person => 
+         <CharacterCard key={person.id} people={person}/>
+      )}</StyledCardsContainer>
       {/* <h2>TODO: `array.map()` over your state here!</h2> */}
     </section>)
 

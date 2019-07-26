@@ -21,7 +21,7 @@ export default function EpisodesList() {
 
     return (<div>
         {episode.map(ep => 
-           <EpisodeCard key={ep.id} episode={episode}/>
+           <EpisodeCard key={ep.id} episode={ep}/>
         )}
     </div>)
 

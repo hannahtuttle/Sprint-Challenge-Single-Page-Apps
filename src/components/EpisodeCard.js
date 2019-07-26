@@ -6,9 +6,9 @@ export default function EpisodeCard (props) {
   return (<div>
     <Card >
     <Card.Content>
-      <Card.Header>Episode</Card.Header>
+      <Card.Header>Episode: {props.episode.name}</Card.Header>
       <Card.Meta>
-        <span className='date'>{props.episode.name}</span>
+        <span className='date'></span>
       </Card.Meta>
       <Card.Description>
         <p>Air date: {props.episode['air_date']}</p>
